@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="C:\Users\jishn\OneDrive\Desktop\datastates.html\datastateshome.html\datastate2.html"
+    />
+    <style>
+      /* CSS code for styling the website */
+      body {
+        background-color: black;
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .searchbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      .searchbox input {
+        width: 300px;
+        height: 30px;
+        border: none;
+        border-radius: 15px;
+        padding-left: 15px;
+        outline: none;
+      }
+
+      .searchbox button {
+        width: 50px;
+        height: 30px;
+        border: none;
+        border-radius: 15px;
+        background-color: white;
+        color: black;
+        font-weight: bold;
+        margin-left: 10px;
+        cursor: pointer;
+      }
+
+      .container {
+        display: flex;
+      }
+
+      .sidebar {
+        width: 15%;
+        height: calc(100vh - 40px);
+        background-color: black;
+        color: white;
+        padding-top: 20px;
+      }
+
+      .sidebar ul {
+        list-style-type: none;
+        padding-left: 20px;
+      }
+
+      .sidebar li {
+        margin-bottom: 10px;
+        border: 2px solid green;
+        padding: 10px;
+      }
+
+      .content {
+        width: 85%;
+        height: calc(100vh - 40px);
+      }
+
+      h2 {
+        color: white;
+        text-align: center;
+      }
+
+      .row {
+        display: flex;
+        justify-content: center;
+      }
+
+      .box {
+        width: 200px;
+        height: 100px;
+        margin: 20px;
+        border: 2px solid red;
+        background-color: white;
+      }
+
+      .box p {
+        text-align: center;
+        line-height: 100px;
+      }
+
+      .box:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HTML code for creating the website structure -->
+    <div class="searchbox">
+      <input
+        type="text"
+        id="search"
+        placeholder="Search for a dataset by title..."
+      />
+      <button id="submit">Go</button>
+    </div>
+    <div class="container">
+      <div class="sidebar">
+        <ul>
+          <li>Liked</li>
+          <li>Check later</li>
+          <li>Saved</li>
+        </ul>
+      </div>
+      <div class="content">
+        <h2>Datasets</h2>
+        <div class="row">
+          <div class="box" id="audio">
+            <p>
+              Audio
+              <a
+                href="C:\Users\jishn\OneDrive\Desktop\datastates.html\datastateshome.html\datastate2.html"
+              ></a>
+            </p>
+          </div>
+          <div class="box" id="video">
+            <p>Video</p>
+          </div>
+          <div class="box" id="text">
+            <p>Text</p>
+          </div>
+          <div class="box" id="image">
+            <p>Image</p>
+          </div>
+        </div>
+        <h2>Trending</h2>
+        <div class="row">
+          <!-- Add some boxes for trending datasets here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript code for adding functionality to the website -->
+    <script>
+      // A function to open a new page of the same website with links to datasets of a given type
+      function openPage(type) {
+        let url = "https://www.example.com/" + type + ".html"; // create a url with the type as a subpage
+        window.open(url, "_self"); // open the url in the same tab
+      }
+
+      // Get the box elements by id
+      let audio = document.getElementById("audio");
+      let video = document.getElementById("video");
+      let text = document.getElementById("text");
+      let image = document.getElementById("image");
+
+      // Set their onclick event handlers to openPage function with their respective types
+      audio.onclick = function () {
+        openPage("audio");
+      };
+      function openPage(type) {
+        let url;
+        if (type === "audio") {
+          url =
+            "C:\\Users\\jishn\\OneDrive\\Desktop\\datastates.html\\datastateshome.html\\datastate2.html";
+        } else {
+          url = "https://www.example.com/" + type + ".html"; // create a url with the type as a subpage
+        }
+        window.open(url, "_self"); // open the url in the same tab
+      }
+
+      video.onclick = function () {
+        openPage("video");
+      };
+
+      text.onclick = function () {
+        openPage("text");
+      };
+
+      image.onclick = function () {
+        openPage("image");
+      };
+    </script>
+  </body>
+</html>
